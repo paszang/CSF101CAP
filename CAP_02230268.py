@@ -11,7 +11,7 @@
 # https://www.w3schools.com/python/python_dictionaries.asp#:~:text=Dictionaries%20are%20used%20to%20store,and%20earlier%2C%20dictionaries%20are%20unordered.
 ################################
 # SOLUTION
-# Solution Score: 46501
+# Solution Score: 49843
 # put your number here: 8
 ################################
 
