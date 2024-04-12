@@ -12,6 +12,7 @@
 ################################
 # SOLUTION
 # Solution Score: 46501
+# put your number here: 8
 ################################
 
 # Read the input.txt file
