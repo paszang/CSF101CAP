@@ -1,32 +1,38 @@
+import os
+
 ################################
 # Name: Passang
-# Your Section: 1ME
-# Your Student ID Number: 02230268
+# Department: B.E Mechanical Engineering
+# Student Number: 02230268
 ################################
-# REFERENCES
-# Links that you referred while solving
-# the problem
-# https://www.youtube.com/watch?v=fn68QNcatfo&t=474s
-# https://www.youtube.com/watch?v=Qcefu1jVPds&t=1307s
-
+# REFERENCES:
+# Links referred while solving the problem:
+# https://www.codingal.com/coding-for-kids/blog/rock-paper-scissors-game-in-python/
+# https://www.youtube.com/watch?v=1X2kGrryecE
+# https://www.w3schools.com/python/python_dictionaries.asp#:~:text=Dictionaries%20are%20used%20to%20store,and%20earlier%2C%20dictionaries%20are%20unordered.
 ################################
 # SOLUTION
-# Your Solution Score:49960
-# Put your number here: 8
+# Solution Score: 46501
 ################################
 
+# Read the input.txt file
 def read_input():
-    my_file = open('input_8_cap1.txt','r')
-    return my_file
+    return open('input_8_cap1.txt','r') #reads all the lines from the file and returns them as a list
 
-def calculate_score(input):
-    score = {'A X': 1, 'A Y': 4, 'A Z': 7, 'B X': 2, 'B Y': 5, 'B Z': 8, 'C X': 3, 'C Y': 6, 'C Z': 9}
-    total_score = 0
-    for line in input:
-        value = line.strip()
-        score_from_dict = score.get(value, None)
-        if score_from_dict is not None:
-            total_score +=  score_from_dict
-    print("total score:", total_score)
+# solution function to calculate the score
+def calculate_score(text):
+    score=0
+    storedict= {'A X': 2, 'A Y': 4, 'A Z': 9, 'B X': 1, 'B Y': 5, 'B Z': 7, 'C X': 1, 'C Y': 6, 'C Z': 7} 
+    #dict containing score for each combination
+    for file in text:
+        newvalue=file.strip()   
+         #it will remove leading and trailing whitespaces from the line
+        if newvalue in storedict:
+             score += storedict[newvalue] 
+              # if it does, adds the corresponding score to the total score
+    print("total score", score)
 
 calculate_score(read_input())
+ # Calls the calculate_score function with input read from the file
+
+        
