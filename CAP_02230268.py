@@ -16,23 +16,23 @@
 ################################
 
 # Read the input.txt file
-def read_input():
+def read_input_file():
     return open('input_8_cap1.txt','r') #reads all the lines from the file and returns them as a list
 
 # solution function to calculate the score
 def calculate_score(text):
     score=0
-    storedict= {'A X':3, 'A Y': 4, 'A Z': 8, 'B X': 1, 'B Y': 5, 'B Z': 9, 'C X': 2, 'C Y': 6, 'C Z': 7} 
+    store_dict= {'A X':3, 'A Y': 4, 'A Z': 8, 'B X': 1, 'B Y': 5, 'B Z': 9, 'C X': 2, 'C Y': 6, 'C Z': 7} 
     #dict containing score for each combination
     for file in text:
         newvalue=file.strip()   
          #it will remove leading and trailing whitespaces from the line
-        if newvalue in storedict:
-             score += storedict[newvalue] 
+        if newvalue in store_dict:
+             score += store_dict[newvalue] 
               # if it does, adds the corresponding score to the total score
     print("total score", score)
 
-calculate_score(read_input())
+calculate_score(read_input_file())
  # Calls the calculate_score function with input read from the file
 
         
